@@ -84,7 +84,7 @@ function to_r(text) {
 var JavaScriptObfuscator = require('javascript-obfuscator');
 var uglify = require('uglify-js');
 var argOutPos = process.argv.indexOf('-o') + 1 | process.argv.indexOf('--output') + 1;
-var fName = process.argv.indexOf('-o') + 2 | process.argv.indexOf('--output') + 1;
+var fName = process.argv.indexOf('-o') + 2 | process.argv.indexOf('--output') + 2;
 var fs = require('fs');
 var encoded = new TextEncoder().encode(fs.readFileSync(process.argv[fName]));
 var ets = encoded.toString().split(',');
